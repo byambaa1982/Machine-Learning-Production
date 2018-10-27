@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Put features and see her price!!!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form action="/predcars" method="post">
+   <div>
+                        <label for="name">Mileage</label>
+                        <input type="text" id="class" name="predict_mile" value=41050>
+                    </div>
+                    <div>
+                        <label for="name">Model Year: 2000 - 2017 </label>
+                        <input type="text" id="age" name="predict_year" value=2013>
+                    </div>
+                    <div>
+                        <label for="name">Brakes</label>
+                        <input type="text" id="sibsp" name="predict_brake" value=4>
+                    </div>
+                    <div>
+                        <label for="name">Airbag</label>
+                        <input type="text" id="parch" name="predict_airbag" value=6>
+                    </div>
+                    <div>
+                        <label for="name">Camera </label>
+                        <input type="text" id="fare" name="predict_camera" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Control</label>
+                        <input type="text" id="sex" name="predict_control" value=11>
+                    </div>
+                    <div>
+                        <label for="name">Speaker</label>
+                        <input type="text" id="sex" name="predict_speaker" value=1>
+                    </div>
+                    <div>
+                        <label for="name">Video</label>
+                        <input type="text" id="sex" name="predict_video" value=6>
+                    </div>
+                    <div>
+                        <label for="name">Bluetooth</label>
+                        <input type="text" id="sex" name="predict_bluetooth" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Alarm</label>
+                        <input type="text" id="sex" name="predict_alarm" value=1>
+                    </div>
+                    <div>
+                        <label for="name">Navigation</label>
+                        <input type="text" id="sex" name="predict_navigation" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Digital</label>
+                        <input type="text" id="sex" name="predict_digital" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Keyless</label>
+                        <input type="text" id="sex" name="predict_keyless" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Heated</label>
+                        <input type="text" id="sex" name="predict_heated" value=2>
+                    </div>
+                    <div>
+                        <label for="name">Leather</label>
+                        <input type="text" id="sex" name="predict_leather" value=1>
+                    </div>
+                    <div>
+                        <label for="name">Armrest</label>
+                        <input type="text" id="sex" name="predict_armrest" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Total</label>
+                        <input type="text" id="sex" name="predict_total" value=145>
+                    </div>
+                    <div>
+                        <label for="name">Drivetrain</label>
+                        <input type="text" id="sex" name="predict_drivetrain" value=3>
+                    </div>
+                    <div>
+                        <label for="name">Fuel Type</label>
+                        <input type="text" id="sex" name="predict_fueltype" value=3>
+                    </div>
+                    <div>
+                        <label for="name">Transmission</label>
+                        <input type="text" id="sex" name="predict_transmission" value=0>
+                    </div>
+                    <div>
+                        <label for="name">Make</label>
+                        <input type="text" id="sex" name="predict_make" value=50>
+                    </div>
+                    <div>
+                        <label for="name">Model</label>
+                        <input type="text" id="sex" name="predict_model" value=421>
+                    </div>
+                </form>         
+    <button class="btn" type="submit" form="titanic_predict" value="Submit">Predict</button>
+  </form>
+{% endblock %}

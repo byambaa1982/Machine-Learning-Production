@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Put features and see her price!!!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="col-lg-6">
+        <!-- Result presentation goes here -->
+        {% if data.prediction %}
+            <h1>{{data.prediction}}</h1>
+            <h5>Mileage: {{data.form.predict_mile}}</h5>
+            <h5>Model Year: {{data.form.predict_year}}</h5>
+            <h5>Brakes: {{data.form.predict_brake}}</h5>
+            <h5>Airbag: {{data.predict_airbag}}</h5>
+            <h5>Camera: {{data.form.predict_camera}}</h5>
+            <h5>Controls: {{data.form.predict_control}}</h5>
+            <h5>Speakers: {{data.form.predict_speaker}}</h5>
+            <h5>Video: {{data.form.predict_video}}</h5>
+            <h5>Bluetooth: {{data.form.predict_bluetooth}}</h5>
+            <h5>Alarm: {{data.predict_alarm}}</h5>
+            <h5>Navigations: ${{data.form.predict_navitation}}</h5>
+            <h5>Digital: {{data.form.predict_digital}}</h5>
+            <h5>Keyless: {{data.form.predict_keyless}}</h5>
+            <h5>Heated: {{data.form.predict_heated}}</h5>
+            <h5>Leather: {{data.form.predict_leather}}</h5>
+            <h5>Armrest: {{data.form.predict_armrest}}</h5>
+            <h5>Drivetrain: {{data.form.predict_drivetrain}}</h5>
+            <h5>Fuel Type: {{data.form.predict_fueltype}}</h5>
+            <h5>Transmission: {{data.form.predict_transmission}}</h5>
+            <h5>Make: {{data.form.predict_make}}</h5>
+            <h5>Model: {{data.form.predict_model}}</h5>
+            <h5>Total: {{data.form.predict_total}}</h5>
+        {% endif %}
+    </div>
+</div>

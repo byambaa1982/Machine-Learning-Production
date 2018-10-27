@@ -47,7 +47,7 @@ def register():
 
         flash(error)
 
-    return render_template('auth/register.html')
+    return render_template('blog/cars.html')
 
 @bp.route('/login', methods=('GET', 'POST'))
 def login():
@@ -87,3 +87,7 @@ def load_logged_in_user():
 def logout():
     session.clear()
     return redirect(url_for('index'))
+
+@bp.route('/predcars')
+def predcars():
+    return render_template('cars.html')
