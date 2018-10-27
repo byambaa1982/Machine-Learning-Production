@@ -32,10 +32,11 @@ def create_app(test_config=None):
     from flaskr import db
     db.init_app(app)
 
-    
-    from flaskr import auth, blog
+
+    from flaskr import auth, blog, xgboost
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
+    app.register_blueprint(xgboost.bp)
     app.add_url_rule('/', endpoint='index')
 
     return app
