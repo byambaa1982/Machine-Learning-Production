@@ -37,6 +37,8 @@ def model():
 # ------------Pickle my model to use later------------#
 	return pickle.dump(gbr, open("model.pkl", "wb"))
 
+
+# -----------------------test score---------------------
 @bp.route('/test')
 def test():
 	large = pd.read_csv('flaskr/data/used_cars.csv')
@@ -49,6 +51,9 @@ def test():
 	load_model=pickle.load(open("model.pkl", "rb"))
 	test_score=load_model.score(X_test, np.log(y_test))
 	return test_score
+
+#-----------------------train score-------------------
+
 
 
 @bp.route('/train')
@@ -64,10 +69,6 @@ def train():
 	load_model=pickle.load(open("model.pkl", "rb"))
 	train_score=load_model.score(X_train, np.log(y_train))
 	return train_score
-# @model
-# @bp.route('/scores')
-# def scores():
-#     load_model=pickle.load(open("model.pkl", "rb"))
-#     result=load_model.score(X_train, np.log(y_train))
-#     test_score=load_model.score(X_test, np.log(y_test))
+
+
 #     return render_template('blog/score.html', output=result, test_score=test_score)
