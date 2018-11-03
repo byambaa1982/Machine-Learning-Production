@@ -80,16 +80,16 @@ def predict():
 		prediction = np.exp(prediction[0])
 
 		data['prediction'] = 'Approximate price is {:.1f}'.format(prediction)
-	return data['prediction']
+	return '{}'.format(data['prediction'])
 
-@bp.route('/tryform', methods=['GET', 'POST'])
-def tryform():
-	username = request.form.get('predict_mile')
-	return 'it is {}'.format(username)
+# @bp.route('/tryform', methods=['GET', 'POST'])
+# def tryform():
+# 	username = request.form['predict_mile']
+# 	return 'it is {}'.format(username)
 
-# #-------------prediction----------
+#-------------prediction----------
 @bp.route('/result', methods=['GET', 'POST'])
 def result():
-	data=tryform()
+	data=predict()
 	return render_template('result.html', data=data)
 

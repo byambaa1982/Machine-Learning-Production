@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <form action="{{ url_for('predict.tryform') }}" method="post">
+  <form action="{{ url_for('predict.result') }}" method="post" id="usedcar">
         <div>
             <label for="name">Mileage</label>
             <input type="text" id="class" name="predict_mile" value=41050>
@@ -95,7 +95,7 @@
             <input type="text" id="sex" name="predict_model" value=421>
         </div>
         </form>  
-        <button class="btn" type="submit" form="titanic_predict" value="Submit">Predict!</button>       
-                <a href="{{ url_for('predict.result') }}">Predict</a>
+        <button class="btn" type="submit" form="usedcar" value="Submit">Predict!</button>       
+
 
     {% endblock %}
