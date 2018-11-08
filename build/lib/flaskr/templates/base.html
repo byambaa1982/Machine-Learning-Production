@@ -2,14 +2,16 @@
 <title>{% block title %}{% endblock %} - Flaskr</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
-  <h1>Flaskr</h1>
+  <h1>Enkhbat's ML app</h1>
   <ul>
     {% if g.user %}
       <li><span>{{ g.user['username'] }}</span>
       <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
     {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
+      <li><a href="{{ url_for('predict.home') }}">Home</a>
+<!--       <li><a href="{{ url_for('auth.login') }}">Result</a> -->
+      <li><a href="{{ url_for('score.score') }}">Score</a>
+<!--       <li><a href="{{ url_for('predict.predict') }}">Predict</a> -->
     {% endif %}
   </ul>
 </nav>

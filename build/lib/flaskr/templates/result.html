@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Your car price is : {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<!-- <h1>{{data.rediction}}</h1> -->
+        <!-- Result presentation goes here -->
+<div>
+    {% if data %}
+    <h1>{{data}}</h1>
+
+    {% endif %}
+</div>
+<!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper/popper.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+{% endblock %}

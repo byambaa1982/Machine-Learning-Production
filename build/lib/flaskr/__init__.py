@@ -1,8 +1,8 @@
 import os
-
+import importlib
 from flask import Flask
 
-
+TEMPLATES_AUTO_RELOAD=True
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -32,10 +32,14 @@ def create_app(test_config=None):
     from flaskr import db
     db.init_app(app)
 
-    
-    from flaskr import auth, blog
+
+    from flaskr import auth, blog, xgboost, score, predict
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
+    app.register_blueprint(xgboost.bp)
+    app.register_blueprint(score.bp)
+    app.register_blueprint(predict.bp)
+  
     app.add_url_rule('/', endpoint='index')
 
     return app
